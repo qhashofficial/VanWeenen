@@ -51,25 +51,6 @@ export default function Contact() {
     toast.success("Uw bericht is verzonden! Wij nemen zo snel mogelijk contact met u op.");
   };
 
-  const handleMapReady = (map: google.maps.Map) => {
-    const position = { lat: 51.9936, lng: 4.6714 }; // Moordrecht coordinates
-    new google.maps.Marker({
-      position,
-      map,
-      title: "Van Weenen Dakdekkers",
-      icon: {
-        path: google.maps.SymbolPath.CIRCLE,
-        scale: 12,
-        fillColor: "#f97316",
-        fillOpacity: 1,
-        strokeColor: "#ffffff",
-        strokeWeight: 3,
-      },
-    });
-    map.setCenter(position);
-    map.setZoom(15);
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
@@ -147,12 +128,12 @@ export default function Contact() {
                     <div className="font-['Raleway'] font-bold text-[#1e2329] mb-1">Openingstijden</div>
                     <div className="space-y-1 font-['Nunito_Sans'] text-sm text-gray-600">
                       <div className="flex justify-between gap-6">
-                        <span>Maandag – Vrijdag</span>
-                        <span className="font-semibold">07:00 – 18:00</span>
+                        <span>Maandag - Vrijdag</span>
+                        <span className="font-semibold">08:00 - 18:00</span>
                       </div>
                       <div className="flex justify-between gap-6">
                         <span>Zaterdag</span>
-                        <span className="font-semibold">08:00 – 14:00</span>
+                        <span className="text-gray-400">Gesloten</span>
                       </div>
                       <div className="flex justify-between gap-6">
                         <span>Zondag</span>
@@ -341,7 +322,6 @@ export default function Contact() {
               className="w-full h-full"
               initialCenter={{ lat: 51.9936, lng: 4.6714 }}
               initialZoom={15}
-              onMapReady={handleMapReady}
             />
           </div>
 

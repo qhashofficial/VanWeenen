@@ -55,28 +55,28 @@ const services = [
 const stats = [
   { value: "15+", label: "Jaar Ervaring" },
   { value: "500+", label: "Projecten Voltooid" },
-  { value: "4.8★", label: "Google Rating" },
+  { value: "4.8★", label: "Google-beoordeling" },
   { value: "100%", label: "Tevredenheidsgarantie" },
 ];
 
 const reviews = [
   {
-    name: "Peter van den Berg",
+    name: "JJ H",
     rating: 5,
-    text: "Van Weenen heeft ons dak perfect gerepareerd. Snel, netjes en voor een eerlijke prijs. Absoluut aan te raden!",
-    date: "2 maanden geleden",
+    text: "Echt toppers! Heb ons dak laten doen door deze partij, heldere communicatie en leveren goed werk! Ook waren de mannen erg vriendelijk en hebben alles netjes achtergelaten. AANRADER!",
+    date: "1 maand geleden",
   },
   {
-    name: "Marieke de Vries",
+    name: "Jeroen Visser",
     rating: 5,
-    text: "Uitstekend werk geleverd aan ons platte dak. Professioneel team, goede communicatie en kwaliteitswerk.",
-    date: "3 maanden geleden",
+    text: "Jaren lang last gehad van een lekkage die meerdere bedrijven niet konden vinden! Maar deze man kwam er zo achter en heeft het vakkundig opgelost en voor een mooie nette prijs waar andere het dubbele vroegen. Zeker een aanrader",
+    date: "1 maand geleden",
   },
   {
-    name: "Johan Smit",
+    name: "Erik",
     rating: 5,
-    text: "Na een storm had ik snel hulp nodig. Van Weenen was er dezelfde dag nog. Heel tevreden met het resultaat!",
-    date: "4 maanden geleden",
+    text: "Na de recente storm zijn meerdere nokpannen van het dak gewaaid, ondanks de drukte hebben ze nog dezelfde dag nieuwe nokpannen erop gelegd. Een goede en snelle service! Bedankt Jan van Weenen!",
+    date: "4 jaar geleden",
   },
 ];
 
@@ -117,15 +117,12 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#1e2329]/90 via-[#1e2329]/70 to-[#1e2329]/30" />
         </div>
 
-        {/* Orange diagonal accent */}
-        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#f97316]" />
-
         <div className="container relative z-10 py-20">
           <div className="max-w-2xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-[#f97316]/20 border border-[#f97316]/40 text-[#f97316] px-4 py-2 rounded-full text-sm font-['Nunito_Sans'] font-semibold mb-6">
               <Star size={14} className="fill-[#f97316]" />
-              4.8 Google Rating · Moordrecht
+              4.8 Google-beoordeling · Moordrecht
             </div>
 
             <h1 className="font-['Raleway'] font-extrabold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
@@ -159,7 +156,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-6 mt-10">
               {[
                 { icon: <Shield size={16} />, text: "Vakkundig & Verzekerd" },
-                { icon: <Clock size={16} />, text: "Snel Ter Plaatse" },
+                { icon: <Clock size={16} />, text: "Snel ter plaatse" },
                 { icon: <Award size={16} />, text: "15+ Jaar Ervaring" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 text-white/70 text-sm font-['Nunito_Sans']">
@@ -227,10 +224,10 @@ export default function Home() {
                 <div className="font-['Raleway'] font-extrabold text-2xl">4.8</div>
                 <div className="flex gap-0.5 my-1">
                   {[1,2,3,4,5].map(i => (
-                    <Star key={i} size={12} className={i <= 4 ? "fill-white text-white" : "fill-white/50 text-white/50"} />
+                    <Star key={i} size={12} className="fill-white text-white" />
                   ))}
                 </div>
-                <div className="text-white/80 text-xs font-['Nunito_Sans']">Google Rating</div>
+                <div className="text-white/80 text-xs font-['Nunito_Sans']">Google-beoordeling</div>
               </div>
             </div>
           </div>
@@ -248,7 +245,7 @@ export default function Home() {
               Onze Dakdiensten
             </h2>
             <p className="text-gray-500 text-base max-w-xl mx-auto font-['Nunito_Sans']">
-              Van Van Weenen Dakdekkers kunt u rekenen op een volledig pakket aan dakwerkzaamheden, uitgevoerd door ervaren vakmensen.
+              Van Weenen Dakdekkers biedt een volledig pakket aan dakwerkzaamheden, uitgevoerd door ervaren vakmensen.
             </p>
           </div>
 

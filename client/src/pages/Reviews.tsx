@@ -11,47 +11,32 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663445270080/RVSkLAhDb5f3b5uyvqcUrq/hero-roofing-ABbh78UKDU2FsLdUGQnC4T.webp";
+const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place/Van+Weenen/@51.9889421,4.6749141,17z/data=!4m8!3m7!1s0x47c5d3fedc0a665b:0xf249ecc86a22db35!8m2!3d51.9889421!4d4.6749141!9m1!1b1!16s%2Fg%2F1twyyq_p!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D";
 
 const reviews = [
   {
-    name: "Peter van den Berg",
-    location: "Moordrecht",
+    name: "JJ H",
     rating: 5,
-    date: "2 maanden geleden",
-    service: "Dakreparatie",
-    text: "Van Weenen heeft ons dak perfect gerepareerd na de storm. Ze kwamen dezelfde dag nog langs voor een inspectie en de reparatie was de volgende dag al klaar. Snel, netjes en voor een eerlijke prijs. Absoluut aan te raden voor iedereen in Moordrecht!",
+    date: "1 maand geleden",
+    text: "Echt toppers! Heb ons dak laten doen door deze partij, heldere communicatie en leveren goed werk! Ook waren de mannen erg vriendelijk en hebben alles netjes achtergelaten. AANRADER!",
   },
   {
-    name: "Marieke de Vries",
-    location: "Gouda",
+    name: "Jeroen Visser",
     rating: 5,
-    date: "3 maanden geleden",
-    service: "Plat dak renovatie",
-    text: "Uitstekend werk geleverd aan ons platte dak. Het team was professioneel, communiceerde goed over de planning en het resultaat is prachtig. Het dak is nu volledig waterdicht en we hebben er geen omkijken meer naar. Zeker een aanrader!",
+    date: "1 maand geleden",
+    text: "Jaren lang last gehad van een lekkage die meerdere bedrijven niet konden vinden! Maar deze man kwam er zo achter en heeft het vakkundig opgelost en voor een mooie nette prijs waar andere het dubbele vroegen. Zeker een aanrader",
   },
   {
-    name: "Johan Smit",
-    location: "Waddinxveen",
+    name: "Erik",
     rating: 5,
-    date: "4 maanden geleden",
-    service: "Lekdetectie & Reparatie",
-    text: "Na een periode van regen had ik last van lekkage. Van Weenen was er snel bij, vond de oorzaak meteen en repareerde het vakkundig. Vriendelijk personeel, eerlijke prijzen en goed werk. Meer kan ik niet wensen!",
+    date: "4 jaar geleden",
+    text: "Na de recente storm zijn meerdere nokpannen van het dak gewaaid, ondanks de drukte hebben ze nog dezelfde dag nieuwe nokpannen erop gelegd. Een goede en snelle service! Bedankt Jan van Weenen!",
   },
   {
-    name: "Sandra Kooiman",
-    location: "Nieuwerkerk aan den IJssel",
+    name: "rob g",
     rating: 5,
-    date: "5 maanden geleden",
-    service: "Dakonderhoud",
-    text: "Jaarlijks onderhoud laten uitvoeren door Van Weenen. Ze zijn altijd op tijd, werken netjes en geven een duidelijk rapport van de staat van het dak. Fijn dat je weet dat je dak in goede handen is. Ik ben al jaren klant en dat blijf ik!",
-  },
-  {
-    name: "Henk Verhoeven",
-    location: "Moordrecht",
-    rating: 4,
-    date: "6 maanden geleden",
-    service: "Dakinstallatie",
-    text: "Nieuw dak laten plaatsen. Het werk is goed gedaan en de prijs was redelijk. Communicatie kon iets beter, maar het eindresultaat is prima. Zou ze zeker aanbevelen aan anderen in de omgeving.",
+    date: "4 jaar geleden",
+    text: "Goede dakdekkers, goed geholpen door Jan en zoon",
   },
 ];
 
@@ -82,8 +67,8 @@ export default function Reviews() {
     <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Beoordelingen – Van Weenen Dakdekkers Moordrecht"
-        description="Lees wat klanten zeggen over Van Weenen Dakdekkers. Google rating 4.8/5. Betrouwbare dakdekker in Moordrecht en omgeving."
-        keywords="beoordelingen Van Weenen dakdekkers, reviews dakdekker Moordrecht, Google rating dakdekker"
+        description="Lees wat klanten zeggen over Van Weenen Dakdekkers. Google-beoordeling 4.8/5 op basis van 5 reviews. Betrouwbare dakdekker in Moordrecht en omgeving."
+        keywords="beoordelingen Van Weenen dakdekkers, reviews dakdekker Moordrecht, Google-beoordeling dakdekker"
         canonical="/beoordelingen"
       />
       <Navigation />
@@ -103,7 +88,7 @@ export default function Reviews() {
               Wat Onze <span className="text-[#f97316]">Klanten</span><br />over Ons Zeggen
             </h1>
             <p className="text-white/75 text-lg font-['Nunito_Sans'] leading-relaxed">
-              Wij zijn trots op onze 4.8 Google-beoordeling. Lees hieronder wat onze klanten in Moordrecht en omgeving over ons zeggen.
+              Wij zijn trots op onze 4.8 Google-beoordeling op basis van 5 reviews. Hieronder vindt u een selectie van openbare Google-beoordelingen.
             </p>
           </div>
         </div>
@@ -124,11 +109,11 @@ export default function Reviews() {
                       <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                       <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                     </svg>
-                    <span className="font-['Raleway'] font-bold text-gray-600 text-lg">Google Reviews</span>
+                    <span className="font-['Raleway'] font-bold text-gray-600 text-lg">Google reviews</span>
                   </div>
                   <div className="font-['Raleway'] font-extrabold text-7xl text-[#1e2329] leading-none mb-3">4.8</div>
                   <StarRating rating={5} size={24} />
-                  <p className="text-gray-500 text-sm mt-3 font-['Nunito_Sans']">Gebaseerd op 5 beoordelingen</p>
+                  <p className="text-gray-500 text-sm mt-3 font-['Nunito_Sans']">Gebaseerd op 5 Google-beoordelingen</p>
                 </div>
 
                 {/* Breakdown */}
@@ -171,7 +156,7 @@ export default function Reviews() {
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <div className="font-['Raleway'] font-bold text-[#1e2329] text-base">{review.name}</div>
-                    <div className="text-gray-400 text-xs font-['Nunito_Sans'] mt-0.5">{review.location} · {review.date}</div>
+                    <div className="text-gray-400 text-xs font-['Nunito_Sans'] mt-0.5">{review.date}</div>
                   </div>
                   <div className="flex items-center gap-1 text-xs text-gray-400 font-['Nunito_Sans']">
                     <svg width="14" height="14" viewBox="0 0 24 24">
@@ -186,13 +171,7 @@ export default function Reviews() {
 
                 <StarRating rating={review.rating} />
 
-                <div className="inline-flex items-center mt-3 mb-4">
-                  <span className="bg-[#f97316]/10 text-[#f97316] text-xs font-['Nunito_Sans'] font-semibold px-3 py-1 rounded-full">
-                    {review.service}
-                  </span>
-                </div>
-
-                <div className="relative flex-1">
+                <div className="relative flex-1 mt-4">
                   <Quote size={20} className="text-[#f97316]/30 absolute -top-1 -left-1" />
                   <p className="text-gray-600 text-sm leading-relaxed font-['Nunito_Sans'] pl-4 italic">
                     {review.text}
@@ -219,7 +198,7 @@ export default function Reviews() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://g.page/r/review"
+                href={GOOGLE_REVIEWS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#1e2329] hover:bg-gray-100 px-8 py-4 rounded font-['Raleway'] font-bold text-base transition-all duration-200 hover:-translate-y-0.5"
