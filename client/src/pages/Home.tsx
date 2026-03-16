@@ -117,6 +117,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#1e2329]/90 via-[#1e2329]/70 to-[#1e2329]/30" />
         </div>
 
+        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#f97316]" />
+
         <div className="container relative z-10 py-20">
           <div className="max-w-2xl">
             {/* Badge */}
